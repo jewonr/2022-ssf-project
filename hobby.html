@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>나만의 키오스크 만들기 | 취미</title>
+        <meta charset="”utf-8”" />
+        <link rel="stylesheet" href="./index.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+          .flip {
+            perspective: 1100px;
+          }
+
+          .box {
+            transition: 0.7s;
+            transform-style: preserve-3d;
+          }
+
+          .front, .back {
+            position: absolute;
+            backface-visibility: hidden;
+          }
+
+          .back { 
+            transform: rotateY(180deg);
+          }
+
+          .flip:hover .box {
+            transform: rotateY(180deg);
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="name">취미</h1>
+            <div class="pages">
+              <div class="flip">
+                <div class="red box">
+                  <div class="front">음악</div>
+                  <div class='back'>바이올린 연주</div>
+                </div>
+              </div>
+              <div class="flip">
+                <div class="blue box">
+                  <div class="front">음식</div>
+                  <div class='back'>스파게티</div>
+                </div>
+              </div>
+              <div class="flip">
+                <div class="yellow box">
+                  <div class="front">개발</div>
+                  <div class='back'>React</div>
+                </div>
+              </div>
+              <div class="flip">
+                <div class="green box">
+                  <div class="front">게임</div>
+                  <div class='back'></div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
